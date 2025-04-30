@@ -593,38 +593,50 @@
                 }
             });
         });
-        // Toggle email and WhatsApp visibility
-        document.getElementById('show-email').addEventListener('click', function() {
-            const emailBtn = document.getElementById('show-email');
-            const emailContent = document.getElementById('email-content');
-            
-            emailBtn.classList.toggle('hidden');
-            emailContent.classList.toggle('hidden');
-            
+       document.getElementById('show-email').addEventListener('click', function () {
+        const emailBtn = document.getElementById('show-email');
+        const emailContent = document.getElementById('email-content');
+
+        emailBtn.classList.toggle('hidden');
+        emailContent.classList.toggle('hidden');
+
+        if (!emailContent.classList.contains('hidden')) {
+            // Copy to clipboard
+            navigator.clipboard.writeText(emailContent.textContent).then(() => {
+                alert("Email address copied to clipboard!");
+            });
+
             // Auto-hide after 30 seconds
-            if (!emailContent.classList.contains('hidden')) {
-                setTimeout(function() {
-                    emailBtn.classList.remove('hidden');
-                    emailContent.classList.add('hidden');
-                }, 30000);
-            }
-        });
-        
-        document.getElementById('show-whatsapp').addEventListener('click', function() {
-            const whatsappBtn = document.getElementById('show-whatsapp');
-            const whatsappContent = document.getElementById('whatsapp-content');
-            
-            whatsappBtn.classList.toggle('hidden');
-            whatsappContent.classList.toggle('hidden');
-            
+            setTimeout(function () {
+                emailBtn.classList.remove('hidden');
+                emailContent.classList.add('hidden');
+            }, 30000);
+        }
+    });
+
+    // Toggle WhatsApp visibility and add WhatsApp link
+    document.getElementById('show-whatsapp').addEventListener('click', function () {
+        const whatsappBtn = document.getElementById('show-whatsapp');
+        const whatsappContent = document.getElementById('whatsapp-content');
+
+        whatsappBtn.classList.toggle('hidden');
+        whatsappContent.classList.toggle('hidden');
+
+        if (!whatsappContent.classList.contains('hidden')) {
+            // Format number (remove non-digits)
+            const rawNumber = whatsappContent.textContent.replace(/\D/g, '');
+            const whatsappUrl = `https://wa.me/${rawNumber}`;
+
+            // Open WhatsApp link in new tab
+            window.open(whatsappUrl, '_blank');
+
             // Auto-hide after 30 seconds
-            if (!whatsappContent.classList.contains('hidden')) {
-                setTimeout(function() {
-                    whatsappBtn.classList.remove('hidden');
-                    whatsappContent.classList.add('hidden');
-                }, 30000);
-            }
-        });
+            setTimeout(function () {
+                whatsappBtn.classList.remove('hidden');
+                whatsappContent.classList.add('hidden');
+            }, 30000);
+        }
+    });
         
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
