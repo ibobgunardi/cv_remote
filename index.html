@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobi Gunardi - Backend Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Bobi<span class="text-blue-500">.dev</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden">
+                <i class="fas fa-bars text-white text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 w-full">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="bg-gradient-to-r from-blue-900 to-gray-900 text-white pt-32 pb-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Bobi Gunardi</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-blue-400 mb-6">Backend Developer</h2>
+                <p class="text-xl mb-8">Crafting robust and efficient backend solutions with over 7 years of experience in API development, database optimization, and system architecture.</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">Contact Me</a>
+                    <a href="#projects" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 rounded-lg transition-colors">View Work</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="bg-blue-500 p-1 rounded-full">
+                    <div class="bg-gray-900 p-2 rounded-full">
+                        <img src="/api/placeholder/400/400" alt="Bobi Gunardi" class="rounded-full w-64 h-64">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-blue-100 p-8 rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-4">Professional Profile</h3>
+                        <p class="text-gray-700 mb-4">
+                            I'm a dedicated Backend Developer with extensive experience in designing and implementing server-side applications, RESTful APIs, and database solutions. My expertise spans multiple programming languages and frameworks, with a focus on creating scalable and maintainable code.
+                        </p>
+                        <p class="text-gray-700">
+                            Throughout my career, I've worked on diverse projects ranging from healthcare management systems to e-commerce platforms and internal business applications. I'm passionate about solving complex problems and continuously enhancing my technical skills.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="font-bold text-lg mb-2">Education</h3>
+                            <p class="text-gray-700">Politeknik Piksi Ganesha</p>
+                            <p class="text-gray-700">D3 Manajemen Informasi</p>
+                            <p class="text-gray-700">Completed in 2016</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="font-bold text-lg mb-2">Location</h3>
+                            <p class="text-gray-700">Jl. Kolmas</p>
+                            <p class="text-gray-700">Kota Cimahi</p>
+                            <p class="text-gray-700">Indonesia</p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg col-span-1 md:col-span-2">
+                            <h3 class="font-bold text-lg mb-2">Languages</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Bahasa Indonesia (Native)</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">English (Professional)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12 relative pl-8 border-l-4 border-blue-500">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-2"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Backend Developer</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="text-gray-600 font-semibold">RATNASARI SEHAT GROUP</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-500">2019 - Present</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li class="mb-2">Develop and maintain database schemas, optimize queries, and establish efficient indexing and relationships.</li>
+                            <li class="mb-2">Collaborate with UI/UX designers to build CMS based on design specifications.</li>
+                            <li class="mb-2">Create JSON-based APIs to be consumed by mobile and other platforms.</li>
+                            <li class="mb-2">Prepare comprehensive documentation for APIs.</li>
+                            <li class="mb-2">Deploy APIs and CMS to Linux-based machines.</li>
+                            <li class="mb-2">Built a comprehensive system for managing healthcare operations, including doctor fees, medical supplies, accounting, and HRD.</li>
+                            <li class="mb-2">Gathered system requirements and performed analysis to develop a web-based software solution for real-time reporting.</li>
+                            <li>Conducted troubleshooting and maintenance of software and hardware systems.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative pl-8 border-l-4 border-blue-500">
+                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-2"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Backend Developer</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="text-gray-600 font-semibold">Codelabs Indonesia</span>
+                                <span class="mx-2 text-gray-400">|</span>
+                                <span class="text-gray-500">2012 - 2018</span>
+                            </div>
+                        </div>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li class="mb-2">Designed and implemented backend services for multiple web applications and mobile APIs.</li>
+                            <li class="mb-2">Created and optimized database schemas for various client projects.</li>
+                            <li class="mb-2">Collaborated with frontend developers to ensure seamless integration of backend services.</li>
+                            <li class="mb-2">Performed code reviews and maintained coding standards across projects.</li>
+                            <li>Participated in the full software development lifecycle, from requirement gathering to deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-code"></i>
+                        </span>
+                        Backend Languages & Frameworks
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">PHP (Laravel, Lumen, CodeIgniter)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Golang (Gin)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python (Flask)</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-database"></i>
+                        </span>
+                        Database Technologies
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">MySQL / MariaDB</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">PostgreSQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">MongoDB</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-server"></i>
+                        </span>
+                        DevOps & Infrastructure
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Linux</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Docker</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Redis</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-window-restore"></i>
+                        </span>
+                        Frontend Technologies
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">jQuery</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">ChartJS/Leaflet.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-300 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 max-w-4xl mx-auto">
+                <div class="bg-blue-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        Additional Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">GraphQL</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">RESTful API Design</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">System Architecture</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">Database Optimization</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">API Documentation</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">Performance Tuning</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">Security Best Practices</span>
+                        <span class="bg-white text-gray-800 px-4 py-2 rounded-full shadow-sm">Cloud Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-600 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Healthcare Management System</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive system for managing healthcare operations, including doctor fees, medical supplies, accounting, and HRD.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">RESTful API</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500 text-sm">RATNASARI SEHAT GROUP</span>
+                            <span class="text-gray-500 text-sm">2019-2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-600 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">E-Commerce Platform (Toko Baik)</h3>
+                        <p class="text-gray-600 mb-4">A complete marketplace solution with multi-vendor support, payment gateway integration, and order management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PHP</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">MySQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">API</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500 text-sm">Client Project</span>
+                            <span class="text-gray-500 text-sm">2018</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-blue-600 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Event Management System (EMA)</h3>
+                        <p class="text-gray-600 mb-4">A platform for managing events, registrations, and ticketing with real-time analytics and reporting.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Golang</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Gin</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">RESTful API</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-500 text-sm">Jismo Educational</span>
+                            <span class="text-gray-500 text-sm">2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <h3 class="text-xl font-bold text-center mb-8">Other Notable Projects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">Duvee Internal Apps</h4>
+                        <p class="text-gray-600 text-sm">POS, booking-car, web-app-product, KantorKu</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">DOMO (Dokter Mobil)</h4>
+                        <p class="text-gray-600 text-sm">Mobile service booking platform</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">Wira Energy (ERP)</h4>
+                        <p class="text-gray-600 text-sm">Enterprise resource planning system</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">Pariwisata Platforms</h4>
+                        <p class="text-gray-600 text-sm">Tegal, Gunung Kidul, Pemuteran Bali tourism</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">Zanpay</h4>
+                        <p class="text-gray-600 text-sm">Payment processing platform</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md">
+                        <h4 class="font-bold">BukaBiz</h4>
+                        <p class="text-gray-600 text-sm">Business management application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <div class="bg-gray-100 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Email</p>
+                                    <p class="font-medium">ibobgunardi@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Phone</p>
+                                    <p class="font-medium">+62 812 2324 2307</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Location</p>
+                                    <p class="font-medium">Jl. Kolmas, Kota Cimahi, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-800 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <i class="fab fa-stack-overflow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="bg-gray-100 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-6">Send Me a Message</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">Name</label>
+                                <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">Bobi<span class="text-blue-500">.dev</span></h2>
+                    <p class="text-gray-400 mt-2">Backend Developer & System Architect</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                    <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
+                    <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Bobi Gunardi. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Add active class to current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section, header');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-500');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-blue-500');
+                }
+            });
+        });
+    </script>
+</body>
