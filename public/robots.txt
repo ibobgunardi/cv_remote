@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Optional: Add your sitemap if you ever build one
-# Sitemap: https://mycv-blue-three.vercel.app/sitemap.xml
+Sitemap: https://mycv-blue-three.vercel.app/sitemap.xml
